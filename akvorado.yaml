@@ -66,6 +66,9 @@ inlet:
     geo-database: /usr/share/GeoIP/GeoLite2-Country.mmdb
   snmp:
     workers: 10
+    # when the exporter is not reachable by SNMP, add a SNMP mapping for the exporter:
+    #agents:
+    # <exporter-ip>: <snmp-agent-ip>
   flow:
     inputs:
       - type: udp
